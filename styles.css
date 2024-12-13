@@ -1,0 +1,86 @@
+/* General styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ff0000; /* Bright red background */
+    color: #ffffff; /* White text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.branding {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 40px;
+    color: #ffffff; /* White text for branding */
+    text-align: left;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 100px 0 20px;
+    color: #333;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+    position: relative;
+}
+
+.card img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.card:hover:not(.flipped) {
+    background-color: #ddd;
+}
+
+.status, .lives, .score {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #6c757d;
+}
